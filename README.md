@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Node definition
+
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Insert a new node at the beginning
+
 void insertAtBeginning(struct Node** head, int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -15,7 +15,7 @@ void insertAtBeginning(struct Node** head, int data) {
     *head = newNode;
 }
 
-// Insert a new node at the end
+
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -31,7 +31,7 @@ void insertAtEnd(struct Node** head, int data) {
     temp->next = newNode;
 }
 
-// Delete a node from the beginning
+
 void deleteFromBeginning(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty\n");
@@ -43,7 +43,6 @@ void deleteFromBeginning(struct Node** head) {
     free(temp);
 }
 
-// Display the entire linked list
 void display(struct Node* head) {
     printf("Linked List: ");
     while (head != NULL) {
